@@ -1,9 +1,12 @@
 # pnginjector
-Inserts a tEXTt chunk with a keyword "IPFS" and the hash of the resource on the IPFS. 
+Inserts a tEXt chunk into a given png image. 
 
 ## How to use
-Change the input and output .png file path to where you'd like it.
+The following args should be passed to the executable:
+1) The input directory of the png image.
+2) The output directory of the png image.
+3) The keyword for the tEXt chunk. (See [4.2.3.1. tEXt Textual data here](http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html))
+4) The text to include, relative to the keyword. 
 
 ## Notes
-- If the IPFS hash is longer than 80 characters, this should be refactored to use compressed text.
 - Assumes that the tEXTt chunk should be added at n-12 bytes of the png file.
